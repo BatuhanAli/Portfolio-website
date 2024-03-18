@@ -1,0 +1,52 @@
+#Content{
+    margin-left: 1em;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas:
+      'Education Skills'
+      'Qualifications Achievemnts';
+}
+
+#Content section{
+    margin-top: 1%;
+}
+
+.articleHeader{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 2em;
+}
+
+.skillsUL{
+    text-decoration: none;
+    display: inline;
+}
+
+li{
+    list-style-type: none;
+}
+
+.educationHead{
+    font-size: 1.5em;
+}
+
+.educationULS{
+    display: inline;
+}
+
+#Education{
+    grid-area: Education;
+}
+
+#Skills{
+    grid-area: Skills;
+}
+
+#Qualifications{
+    grid-area: Qualifications;
+}
+
+#Achievemnts{
+    grid-area: Achievemnts;
+}

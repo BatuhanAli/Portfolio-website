@@ -1,0 +1,48 @@
+.Header{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 1%;
+}
+
+#Content{
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+fieldset{
+    border: solid 2pt darkblue;
+    width: 60%;
+    padding-right: 1%;
+}
+
+#inputTitle{
+    border: solid 2pt darkblue;
+    width: 40%;
+    height: 1.5em;
+}
+
+#inputBlog{
+    border: solid 2pt darkblue;
+    width: 100%;
+    min-height: 30em;
+}
+
+#inputDate{
+    border: solid 2pt darkblue;
+    width: 6.5em;
+    height: 1.5em;
+}
+
+.box{
+    margin-bottom: 0.8em;
+}
+
+button{
+    padding: 0%;
+    padding-left: 1px;
+    padding-right: 1px;
+    border: solid 2pt darkblue;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}

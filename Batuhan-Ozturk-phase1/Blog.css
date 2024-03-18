@@ -1,0 +1,10 @@
+.articleHeader{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 2em;
+}
+
+#Content{
+    margin-left: 1%;
+    margin-top: 1%;
+}
