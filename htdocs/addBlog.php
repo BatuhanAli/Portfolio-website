@@ -2,21 +2,21 @@
 $title = $_POST['title'];
 $content = $_POST['content'];
 $date = $_POST['date'];
-    
+$time = $_POST['time'];
+
 $servername = "127.0.0.1";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "portfolio";
 
-$conn = new mysqli($servername, $username, $password, $dbname, 8889);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-
-if ($conn->query($sql) === TRUE) {
-    $sql = "INSERT INTO blogs (title, date, content) VALUES ('$title', '$date', '$content')";
+else {
+    $sql = "INSERT INTO blogs (title, date, content, time) VALUES ('$title', '$date', '$content', '$time')";
 
     $result = $conn->query($sql);
 
@@ -25,7 +25,6 @@ if ($conn->query($sql) === TRUE) {
     } 
 
     else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
         header("Location: addPost.html");
     }
 

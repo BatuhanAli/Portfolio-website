@@ -5,9 +5,15 @@
     margin-bottom: 1%;
 }
 
-#Content{
+#ContentSpecial, #Content{
     margin-left: 1%;
     margin-top: 1%;
+}
+
+#fieldsetSpecial{
+    border: 0;
+    width: 60%;
+    padding-right: 1%;
 }
 
 fieldset{
@@ -26,10 +32,17 @@ fieldset{
 #inputBlog{
     border: solid 2pt darkblue;
     width: 100%;
-    min-height: 30em;
+    min-height: 20em;
+    min-width: 20em;
 }
 
 #inputDate{
+    border: solid 2pt darkblue;
+    width: 10em;
+    height: 1.5em;
+}
+
+#inputTime{
     border: solid 2pt darkblue;
     width: 10em;
     height: 1.5em;
@@ -40,7 +53,8 @@ fieldset{
 }
 
 button{
-    padding: 0%;
+    padding: 1%;
+    font-size: 1.5em;
     padding-left: 0.1em;
     padding-right: 0.1em;
     margin-right: 0.5em;

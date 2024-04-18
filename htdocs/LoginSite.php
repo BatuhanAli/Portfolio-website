@@ -1,10 +1,18 @@
+<?php
+  session_start();
+  if(isset($_SESSION['active'])) {
+      header("Location: addBlogSite.php"); 
+      exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="styles.css" type="text/css">
-    <link rel="stylesheet" href="Blog.css" type="text/css">
+    <link rel="stylesheet" href="Login.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play">
     <title>Batuhan Ozturk Portfolio</title>
@@ -31,19 +39,29 @@
     </div>
 
     <div id="Content">
+        <header>
+            <h1 class="Header">Login Form</h1>
+        </header>
 
-      <header>
-        <h1 class="articleHeader">Blog</h1>
-      </header>
+        <form method="POST" action="login.php">
+            <fieldset>
+                <legend> Login </legend>
+                
+                <label for="email">Email Address</label><br>
+                <input type="email" name="email" id="input" class="box"><br>
+                
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="input" class="box"><br>
+                
 
-      <section>
-        <?php
-          include 'getBlogs.php'
-        ?>
-      </section>
+                <label id="error"></label>
 
+                <button class="box" type="submit" value="Submit">Submit</button>
+            </fieldset>
+        </form>
     </div>
 
+    <script src="login.js"></script>
     <footer> <!-- small footer for information -->
       <div class="footer">
           <p>Made by: Batuhan Ozturk</p>

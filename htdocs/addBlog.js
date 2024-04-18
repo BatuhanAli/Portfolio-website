@@ -10,8 +10,9 @@ form.addEventListener("submit", function(event) {
     var title = document.getElementById("inputTitle").value;
     var content = document.getElementById("inputBlog").value;
     var date = document.getElementById("inputDate").value; 
+    var time = document.getElementById("inputTime").value; 
 
-    if ((title == "") || (content == "") || (date == "")) {
+    if ((title == "") || (content == "") || (date == "") || (time == "")) {
         var Section = document.getElementById("error");
         event.preventDefault();
 
@@ -44,6 +45,11 @@ form.addEventListener("submit", function(event) {
         Border.style.borderColor = "red";
     }
 
+    if (time == ""){
+        var Border = document.getElementById("inputTime");
+        Border.style.borderColor = "red";
+    }
+
 
     // resetting the border color
     if (title != ""){
@@ -58,6 +64,11 @@ form.addEventListener("submit", function(event) {
 
     if (date!= ""){
         var Border = document.getElementById("inputDate");
+        Border.style.borderColor = "";
+    }
+
+    if (time != ""){
+        var Border = document.getElementById("inputTime");
         Border.style.borderColor = "";
     }
 });

@@ -116,3 +116,7 @@ nav{
     grid-area: Content;
     margin-bottom: 10%;
 }
+
+#ContentSpecial{
+    grid-area: Content;
+}
