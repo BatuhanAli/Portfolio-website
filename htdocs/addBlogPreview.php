@@ -1,20 +1,15 @@
 <?php
 session_start();
 
-$title = $_POST['title'];
-$content = $_POST['content'];
-$date = $_POST['date'];
-$time = $_POST['time'];
-
-
-if ($_POST['button'] == "Preview"){
-    $_SESSION['title'] = $title;
-    $_SESSION['content'] = $content;
-    $_SESSION['dateIn'] = $date;
-    $_SESSION['timeIn'] = $time;
-    header("Location: blogPreview.php");
+if ($_POST['button'] == "Edit"){
+    header("Location: addBlogSite.php");
     exit();
 }
+
+$title = $_SESSION['title'];
+$content = $_SESSION['content'];
+$date = $_SESSION['dateIn'];
+$time = $_SESSION['timeIn'];
 
 $servername = "127.0.0.1";
 $username = "root";
@@ -33,6 +28,10 @@ else {
     $result = $conn->query($sql);
 
     if ($result === TRUE) {
+        $_SESSION['title'] = "";
+        $_SESSION['content'] = "";
+        $_SESSION['dateIn'] = "";
+        $_SESSION['timeIn'] = "";
         header("Location: Blog.php");
     } 
 

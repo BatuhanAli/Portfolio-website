@@ -50,21 +50,22 @@ if(!isset($_SESSION['active'])) {
                 <legend> Add Blog </legend>
 
                 <label for="title">Title</label><br>
-                <input id="inputTitle" type="text" name="title" class="box"><br>
+                <input id="inputTitle" type="text" name="title" class="box" <?php include 'getTitle.php' ?>><br>
 
                 <label for="date">Date</label><br>
-                <input type="date" name="date" id="inputDate" class="box"><br>
+                <input type="date" name="date" id="inputDate" class="box" <?php include 'getDate.php' ?>><br>
 
                 <label for="time">Time</label><br>
-                <input type="time" name="time" id="inputTime" class="box"><br>
+                <input type="time" name="time" id="inputTime" class="box" <?php include 'getTime.php' ?>><br>
 
                 <label for="content">Blog Content</label><br>
-                <textarea type="text" name="content" id="inputBlog" class="box"></textarea><br>
+                <textarea type="text" name="content" id="inputBlog" class="box"><?php include 'getContent.php' ?></textarea><br>
 
                 <label id="error"></label>
 
+                <label for="button"></label>
                 <button id="Submit" type="submit" name="Submit" value="Submit"> Submit </button>
-
+                <button name="button" value="Preview" type="submit"> Preview </button>
                 <button onclick="clearBlog()" type="button"> Clear Form </button>
             </fieldset>
         </form>

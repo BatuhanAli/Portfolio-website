@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['active'])) {
+    header("Location: LoginSite.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -36,24 +44,16 @@
         <h1 class="articleHeader">Blog</h1>
       </header>
 
-      <section>
-        <form method="POST" action="findSpecificBlogs.php">
+        <form method="POST" action="addBlogPreview.php">
             <fieldset>
-                <select name="specificDates">
-                    <option disabled>Select a specific date</option>
-                    <?php include('findSpecificDates.php'); ?> 
-                </select>
-
-                <input type="submit" value="Search" name="button">
-                <input type="submit" value="Return" name="button">
-                <input type="submit" value="Add Blog" name="button">
+                <input type="submit" value="Edit" name="button">
+                <input type="submit" value="Submit" name="button">
             </fieldset>
         </form>
-      </section>
 
       <section id="blogContainer">
         <?php
-          include 'getBlogs.php'
+          include 'getPreview.php'
         ?>
       </section>
 

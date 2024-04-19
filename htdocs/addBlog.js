@@ -2,6 +2,11 @@ function clearBlog() {
     var result = confirm('Do you want to proceed?');
     if (result) {
         document.getElementById("blogForm").reset();
+
+        document.getElementById("inputTitle").value = "";
+        document.getElementById("inputDate").value = "";
+        document.getElementById("inputTime").value = "";
+        document.getElementById("inputBlog").value = "";
     }
 }
 

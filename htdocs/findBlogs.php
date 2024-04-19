@@ -6,7 +6,6 @@ if ($conn->connect_error) {
 else {
     $sql = "SELECT title, date, time, content FROM blogs";
     $result = $conn->query($sql);
-    $SpecificDate = $_POST['SpecificDate'];
 
     if ($result->num_rows > 0) {
         $blogs = [];
@@ -17,8 +16,12 @@ else {
 
         bubbleSort($blogs);
 
+        $SpecificBlogs = array_filter($blogs, function($blog) use ($SpecificDate) {
+            return date('F Y', strtotime($blog['date'])) === $SpecificDate;
+        });
+
         // Output the sorted blogs
-        foreach ($blogs as $blog) {
+        foreach ($SpecificBlogs as $blog) {
             echo '<div id="blogOutline">';
             echo '  <header class="blogHeader">';
             echo $blog['title'] . "<br>";

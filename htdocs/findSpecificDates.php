@@ -55,8 +55,12 @@ if ($conn->connect_error) {
         
         // Print out the unique dates in the desired format
         foreach ($uniqueDates as $date) {
-            echo '<option value="' . $date . '">' . $date . '</option>';
+            echo '<option value="' . $date . '" name="SpecificDate">' . $date . '</option>';
         }
+    }
+
+    else {
+        header("Location: loginSite.php");
     }
 }
 ?>

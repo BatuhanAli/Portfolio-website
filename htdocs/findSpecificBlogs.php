@@ -2,6 +2,12 @@
 if ($_POST['button'] == "Return"){
     header("Location: Blog.php");
 }
+
+if ($_POST['button'] == "Add Blog"){
+    header("Location: AddBlogSite.php");
+}
+
+$SpecificDate = $_POST['specificDates'];
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +58,7 @@ if ($_POST['button'] == "Return"){
 
                 <input type="submit" value="Search" name="button">
                 <input type="submit" value="Return" name="button">
+                <input type="submit" value="Add Blog" name="button">
             </fieldset>
         </form>
       </section>
