@@ -1,3 +1,9 @@
+<?php
+if ($_POST['button'] == "Return"){
+    header("Location: Blog.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -39,7 +45,7 @@
       <section>
         <form method="POST" action="findSpecificBlogs.php">
             <fieldset>
-                <select name="specificDates" for="specificDate">
+                <select name="specificDates" for="SpecificDate">
                     <option disabled>Select a specific date</option>
                     <?php include('findSpecificDates.php'); ?> 
                 </select>
@@ -49,13 +55,12 @@
             </fieldset>
         </form>
       </section>
-
+    
       <section id="blogContainer">
         <?php
-          include 'getBlogs.php'
+          include 'findBlogs.php'
         ?>
       </section>
-
     </div>
 
     <footer> <!-- small footer for information -->

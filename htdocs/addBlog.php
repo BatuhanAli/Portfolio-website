@@ -21,7 +21,7 @@ else {
     $result = $conn->query($sql);
 
     if ($result === TRUE) {
-        header("Location: Blog.html");
+        header("Location: Blog.php");
     } 
 
     else {

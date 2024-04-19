@@ -6,6 +6,7 @@ if ($conn->connect_error) {
 else {
     $sql = "SELECT title, date, time, content FROM blogs";
     $result = $conn->query($sql);
+    $SpecificDate = $_POST['SpecificDate'];
 
     if ($result->num_rows > 0) {
         $blogs = [];

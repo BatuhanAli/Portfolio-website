@@ -32,7 +32,7 @@ if(!isset($_SESSION['active'])) {
               <li class="links1"><a href="My_Portfolio.html">Home Page</a></li> <!-- contains home page, About Me and contact details -->
               <li class="links1"><a href="Education.html">Education and Skills</a></li>
               <li class="links1"><a href="Experience.html">Experience and Portfolio</a></li>
-              <li class="links1"><a href="Blog.html">Blog</a></li>
+              <li class="links1"><a href="Blog.php">Blog</a></li>
               <li class="links1"><a href="LoginSite.php">Login</a></li>
               <li class="links1"><a href="AddBlogSite.php">Add Blog</a></li>
           </ul>
