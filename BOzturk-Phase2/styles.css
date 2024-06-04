@@ -1,0 +1,122 @@
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Play";
+}
+.header{
+    padding-top: 0.1%;
+    grid-area: header;
+    background-color: darkblue;
+    padding-left: 0.6em;
+}
+
+.links1{
+    color: darkblue;
+    display: inline;
+    text-decoration: none;
+    padding: 0;
+    padding-right: 1em;
+}
+
+#links1 ul li a:hover{
+    color: white;
+}
+
+#links1{
+    padding-left: 1em;
+}
+
+a, nav, li{
+    text-decoration: none;
+}
+
+#links1 a, #links1 nav, #links1 li:link{
+    color: darkblue;
+    text-decoration: none;
+}
+
+#links1 a:active{
+    color: whitesmoke;
+}
+
+.flexcontainer{
+    display: flex;
+    background-color: darkblue;
+    gap: 1rem;
+    display: inline;
+}
+
+header{
+    background-color: darkblue;
+    color: whitesmoke;
+}
+
+h1{
+    font-size: 3em;
+}
+
+footer{
+    background-color: darkblue;
+    width: 100%;
+    padding: 0.5%;
+    position: fixed;
+    bottom: 0;
+}
+
+nav{
+    background-color: lightgray;
+}
+
+.links_flex{
+    display: flex;
+    flex: 1;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    grid-area: links;
+    background-color: lightgray;
+}
+
+.external_links{
+    border-radius: 20px;
+    background-color: whitesmoke;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+#links_list{
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    margin-left: 0.25%;
+    padding: 0;
+}
+
+.footer{
+    font-family: "Quicksand";
+    color: whitesmoke;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'header header header header header'
+      'links links links links links'
+      'Content Content Content Content Content';
+}
+
+#Content{
+    grid-area: Content;
+    margin-bottom: 10%;
+}
+
+#ContentSpecial{
+    grid-area: Content;
+}
